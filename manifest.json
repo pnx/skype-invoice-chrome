@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    "name": "Skype Invoice",
+    "description": "Inserts links on the skype order page for downloading invoices in PDF format.",
+    "homepage_url": "https://github.com/pnx/skype-invoice-chrome",
+    "author" : "Henrik Hautakoski",
+    "version": "0.1",
+    
+    "icons": {
+        "32" : "icons/icon32.png",
+        "48" : "icons/icon48.png"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": [ 
+                "https://secure.skype.com/wallet/account/orders*"
+            ],
+            "js": [ 
+                "vendor/jquery-2.2.4.min.js", 
+                "inject-invoice-link.js" 
+            ]
+        }
+    ]
+}

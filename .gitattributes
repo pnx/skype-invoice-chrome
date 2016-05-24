@@ -1,0 +1,16 @@
+
+# normalize these files. Always LF on checkout and always LF on checkin
+.gitignore eol=lf
+.gitattributes eol=lf
+*.js text eol=lf
+*.json text eol=lf
+
+# Binary files, should never be normalized.
+*.exe binary
+*.dll binary
+*.so binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
